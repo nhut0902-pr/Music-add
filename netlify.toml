@@ -1,0 +1,10 @@
+[build]
+  # Thư mục chứa các tệp frontend sẽ được public
+  publish = "public"
+  # Thư mục chứa các hàm serverless
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
