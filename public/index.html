@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-view">
+        <h1>Spotify Web Player</h1>
+        <p>Đăng nhập để bắt đầu nghe nhạc</p>
+        <a href="/.netlify/functions/login" class="btn-primary">Đăng nhập với Spotify</a>
+    </div>
+
+    <div id="main-view" style="display:none;">
+        <header>
+            <div id="user-profile"></div>
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Tìm kiếm bài hát, nghệ sĩ..." required>
+                <button type="submit">Tìm kiếm</button>
+            </form>
+        </header>
+
+        <main>
+            <h2>Kết quả tìm kiếm</h2>
+            <ul id="search-results"></ul>
+        </main>
+        
+        <footer>
+            <div id="now-playing">
+                <img id="album-art" src="https://i.scdn.co/image/ab67616d0000b273d43add62b3e9a2399984e723" alt="Album Art">
+                <div id="track-info">
+                    <div id="track-name">Chọn một bài hát</div>
+                    <div id="artist-name"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
